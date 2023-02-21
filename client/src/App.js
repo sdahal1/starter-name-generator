@@ -4,13 +4,17 @@ const App = () => {
   const [name, setName] = useState([])
 
   useEffect(() => {
-    fetch('https://enigmatic-shore-92552.herokuapp.com/generate')
+    fetch('https://name-generator-xala.onrender.com/generate')
       .then((res) => res.json())
-      .then((nme) => setName([nme]))
+      .then((nme) => {
+        console.log('nme', nme)
+        setName([nme])
+      })
+      .catch(err=>console.log("errorrrrrrr", err))
   }, [])
 
   return (
-    <h1>{name}</h1>
+    <h1>{name[0]}</h1>
   )
 }
 
