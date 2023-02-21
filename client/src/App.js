@@ -14,7 +14,7 @@ const App = () => {
   }, [])
 
   return (
-    <h1>{name[0]}</h1>
+    <h1>Your random name is: {name[0]}</h1>
   )
 }
 
